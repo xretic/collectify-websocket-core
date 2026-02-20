@@ -30,4 +30,4 @@ app.post("/publish/message", (req, res) => {
   res.json({ ok: true });
 });
 
-server.listen(process.env.PORT || 3001);
+server.listen(3001);

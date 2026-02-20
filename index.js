@@ -11,6 +11,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   path: "/socketio",
+  transports: ["websocket"],
   cors: {
     origin: true,
     credentials: true,
@@ -30,4 +31,4 @@ app.post("/publish/message", (req, res) => {
   res.json({ ok: true });
 });
 
-server.listen(3001);
+server.listen(process.env.PORT);
